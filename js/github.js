@@ -10,7 +10,7 @@ class GitHubSsoTranslator {
         if (isNaN(sso)){
             return Promise.reject();
         }
-        return PromisifyedXmlHttpRequest.get('https://github.build.ge.com/' + sso)
+        return PromisifyedXmlHttpRequest.get('https://github.gehealthcare.com/' + sso)
             .then((data) => {
                 let matchArr = data.match('<title>' + sso + '.\(.*\)<', 'ig');
                 if (matchArr && matchArr.length === 2) {
